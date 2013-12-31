@@ -1,0 +1,188 @@
+@-moz-keyframes spin {
+  from { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  from { transform:rotate(0deg); }
+  to { transform:rotate(360deg); }
+}
+
+/*==================================================
+== HTML
+==================================================*/
+body {
+  background: #fefefe;
+  color: #666;
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: 100;
+  margin: 0;
+  text-align: center;
+  padding: 0;
+}
+
+blockquote,
+p {
+  line-height: 1.5;
+  margin: 0 0 1.5em 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "museo-slab", serif;
+}
+
+h2 {
+  border-bottom: 1px solid #eee;
+  color: #444;
+  padding-bottom: 0.25em;
+}
+
+a {
+  color: #09b86e;
+}
+
+em {
+  background: #fffad4;
+  color: #830900;
+  font-style: normal;
+  padding: 0.15em 0.35em;
+}
+
+blockquote {
+  border-left: 8px solid #efefef;
+  font-family: "museo-slab", serif;
+  font-size: 20px;
+  padding: 0.75em 1.5em;
+}
+
+
+/*==================================================
+== Page Header
+==================================================*/
+
+.page-header {
+  border-bottom: 0;
+}
+
+
+/*==================================================
+== Container
+==================================================*/
+
+.container {
+  margin: 0 auto;
+  max-width: 680px;
+  padding: 3em 1.5em;
+  text-align: left;
+}
+
+
+/*==================================================
+== Navbar
+==================================================*/
+
+.navbar {
+  background: #287a50 url('/static/img/dark-green-trees.png') fixed;
+  border: 0 none;
+  border-bottom: 1px solid #24593f;
+  border-radius: 0;
+  font-family: "museo-slab", serif;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+  .navbar .container {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  .navbar-nav > li > a {
+    color: #acf4d8;
+  }
+    .navbar-nav > li > a:hover {
+      background-color: #1c5638;
+      color: white;
+    }
+
+
+/*==================================================
+== Top section
+==================================================*/
+
+.top-section {
+  background: #57c88e url('/static/img/green-trees.png') fixed;
+}
+
+  .page-head {
+    text-align: center;
+  }
+    .avatar {
+      background: white;
+      border-radius: 100em;
+      box-shadow: 0 0 0 8px #45a273;
+      max-width: 100%;
+      padding: 5px;
+      width: auto;
+    }
+      .avatar:hover {
+        -webkit-animation: spin 2s cubic-bezier(0.680, -0.550, 0.265, 1.550) infinite;
+           -moz-animation: spin 2s cubic-bezier(0.680, -0.550, 0.265, 1.550) infinite;
+            -ms-animation: spin 2s cubic-bezier(0.680, -0.550, 0.265, 1.550) infinite;
+             -o-animation: spin 2s cubic-bezier(0.680, -0.550, 0.265, 1.550) infinite;
+      }
+
+    .page-header {
+      color: #000;
+      font-size: 45px;
+      font-weight: 300;
+      margin: 1em 0;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 0 #ddf5ea, 4px 4px 0 #45a273;
+    }
+      .page-header small {
+        color: #2a6749;
+        display: block;
+        font-size: 20px;
+        text-shadow: 1px 1px 0 #57c88e, 2px 2px 0 #45a273;
+      }
+
+
+/*==================================================
+== Leader
+==================================================*/
+
+.leader {
+  background: #fffad4;
+}
+  .lead {
+    color: #830900;
+    font-family: "museo-slab", serif;
+    font-size: 20px;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+  }
+    .lead a {
+      color: #d71d00;
+    }
+
+
+/*==================================================
+== Links block
+==================================================*/
+
+.links-block {
+  background: #287a50 url('/static/img/dark-green-trees.png') fixed;
+  color: #57c88e;
+}
+  .links-block a {
+    color: #acf4d8;
+    display: block;
+    margin: 0 0 0.25em;
+  }
+  .links-block h2 {
+    border-bottom-color: #45a273;
+    color: #e7fff5;
+  }

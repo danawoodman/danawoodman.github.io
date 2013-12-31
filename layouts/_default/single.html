@@ -1,0 +1,15 @@
+{{ template "chrome/header.html" . }}
+
+   <div class="top-section">
+    <div class="container">
+      <header class="page-head">
+        <h1 class="page-header">{{ .Title }}</h1>
+      </header>
+    </div>
+  </div>
+
+  <div class="main-content container">
+    {{ .Content }}
+  </div>
+
+{{ template "chrome/footer.html" . }}

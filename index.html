@@ -1,0 +1,232 @@
+<doctype html>
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Dana Woodman</title>
+    <meta name="description" content="Dana Woodman's home on the Internet">
+    <meta name="viewport" content="width=device-width">
+    <link href="/css/vendor/shCore.css" type="text/css" rel="stylesheet">
+    <link href="/css/vendor/shThemeDefault.css" type="text/css" rel="stylesheet">
+    <link href="/css/styles.css" type="text/css" rel="stylesheet">
+    <script src="/js/vendor/angular.min.js"></script>
+  </head>
+  <body>
+
+
+    <div class="top-section">
+      <div class="container">
+        <header class="page-head">
+          <img src="/img/dana-woodman.jpg" alt="Dana Woodman" class="avatar">
+          <h1 class="page-header">
+            <small>My name is</small>
+            Dana Woodman
+          </h1>
+        </header>
+      </div>
+    </div>
+
+
+    <div class="leader">
+      <div class="container">
+        <p class="lead">
+          I'm a  <a href="https://github.com/danawoodman">software developer</a>, 
+          <a href="http://chimeraarts.org">community builder</a> and 
+          <a href="http://teleporter.io">entrepreneur</a>.
+          I've been writing software for the web since 2002. 
+          I hail from beautiful <a href="http://en.wikipedia.org/wiki/Sonoma_county">Sonoma County, California</a>.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="about-block">
+      <div class="container">
+        <div class="output">
+          <h2>About Me</h2>
+          <p>
+            I've worked with companies large and small; from <em>Google</em> and <em>Comcast</em>, 
+            to "mom-and-pop" shops and a lot in between. Every project presents unique challenges 
+            and opportunities to grow. <em>That's what keeps me excited about 
+            writing software</em>.
+          </p>
+          <p>
+            I primarily write web applications in Ruby on Rails but I also use Node.js, 
+            Golang and others if the need arises. I have years of experience in Ruby, Python,
+            JavaScript, CSS/Sass and many other web technologies.
+          </p>
+          </p>
+          <p>
+            I've just started making screencasts teaching software development, 
+            <a href="http://thesourcetank.com">check them out</a>.
+          </p>
+          <h2>Etc...</h2>
+          <p>
+            In my spare time I spend a lot of time in the outdoors hiking, 
+            camping, running and exploring.
+            I studied fine arts in college (painting and photography) and have a 
+            passion for creating things with my hands.
+          </p>
+          <p>
+            In early 2012, I started a project to create the <em>first arts and maker space in 
+            Sonoma County</em> and am happy to say that it is alive and well. 
+            We regularly host classes, events and meetups and our membership is growing rapidly.
+          </p>
+        </div>
+        <p class="view-source"><a href="" ng-click="show_bio_source = !show_bio_source" ng-init="show_bio_source = false">Show <code>bio.rb</code> source.</a></p>
+        <div class="input" ng-show="show_bio_source">
+          <pre class="brush: ruby">
+require 'rubygems'
+require 'redcarpet'
+
+bio = &lt;&lt;-BIO
+## About Me
+
+I've worked with companies large and small; from *Google* and *Comcast*, 
+to "mom-and-pop" shops and a lot in between. Every project presents unique challenges 
+and opportunities to grow. *That's what keeps me excited about 
+writing software*.
+
+I primarily write web applications in Ruby on Rails but I also use Node.js, 
+Golang and others if the need arises. I have years of experience in Ruby, Python,
+JavaScript, CSS/Sass and many other web technologies.
+
+I've just started making screencasts teaching software development, 
+[check them out](http://thesourcetank.com).
+
+## Etc...
+
+In my spare time I spend a lot of time in the outdoors hiking, 
+camping, running and exploring.
+I studied fine arts in college (painting and photography) and have a 
+passion for creating things with my hands.
+
+In early 2012, I started a project to create the *first arts and maker space in 
+Sonoma County* and am happy to say that it is alive and well. 
+We regularly host classes, events and meetups and our membership is growing rapidly.
+BIO
+
+md = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+puts md.render(bio)
+          </pre>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="links-block">
+      <div class="container">
+        <div class="output">
+          <h2>Find Me</h2>
+          <a href="https://news.ycombinator.com/user?id=danaw">Hacker News</a>
+          <a href="https://github.com/danawoodman">Github</a>
+          <a href="http://stackoverflow.com/users/529829/dana-woodman">StackOverflow</a>
+        </div>
+        <p class="view-source"><a href="" ng-click="show_link_source = !show_link_source" ng-init="show_link_source = false">Show <code>links.go</code> source.</a></p>
+        <div class="input" ng-show="show_link_source">
+          <pre class="brush: go">
+/*
+
+Find me around the web.
+
+Outputs a list of HTML link tags to the various places 
+around the web you can find me.
+
+*/
+package main
+
+import "fmt"
+
+// Site represents an HTML link tag.
+type Site struct {
+  Label string
+  Url   string
+}
+
+// Implement the Stringer interface on Site.
+func (s *Site) String() string {
+  return fmt.Sprintf("&lt;a href=\"%s\"&gt;%s&lt;/a&gt;", s.Url, s.Label)
+}
+
+func main() {
+
+  // Heading
+  fmt.Println("&lt;h2&gt;Find Me&lt;/h2&gt;")
+
+  sites := []Site{
+    Site{"Hacker News", "https://news.ycombinator.com/user?id=danaw"},
+    Site{"Github", "https://github.com/danawoodman"},
+    Site{"StackOverflow", "http://stackoverflow.com/users/529829/dana-woodman"}
+  }
+
+  for _, site := range sites {
+    fmt.Println(&amp;site)
+  }
+}
+          </pre>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="contact-block">
+      <div class="container">
+        <div class="output" id="js-output">
+          <h2>Contact Me</h2>
+          <p>If you'd like to chat, you can email me at <a href="mailto:dana@danawoodman.com">dana@danawoodman.com</a></p>
+        </div>
+        <p class="view-source">
+          <a href="" ng-click="show_contact_source = !show_contact_source" ng-init="show_contact_source = false">Show <code>contact.js</code> source.</a>
+        </p>
+        <div class="input" ng-show="show_contact_source">
+          <pre class="brush: js">
+var elm = document.getElementById('js-output') // The container element.
+  , heading = document.createElement('h2')
+  , heading_text = document.createTextNode('Contact Me')
+  , para = document.createElement('p')
+  , para_text = document.createTextNode('If you\'d like to chat, you can email me at ')
+  , link = document.createElement('a')
+  , email_address = 'dana@danawoodman.com'
+  , link_text = document.createTextNode(email_address);
+
+// Add text to the elements.
+heading.appendChild(heading_text);
+para.appendChild(para_text);
+link.appendChild(link_text)
+link.href = email_address;
+para.appendChild(link);
+
+// Add the elements to the container.
+elm.appendChild(heading);
+elm.appendChild(para);
+          </pre>
+        </div>
+      </div>
+    </div>
+
+
+    <script type="text/javascript" src="//use.typekit.net/dft6edg.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <script src="/js/vendor/shCore.js"></script>
+    <script src="/js/vendor/shBrushRuby.js"></script>
+    <script src="/js/vendor/shBrushGo.js"></script>
+    <script src="/js/vendor/shBrushJScript.js"></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.defaults['gutter'] = false;
+      SyntaxHighlighter.defaults['toolbar'] = false;
+      SyntaxHighlighter.all();
+    </script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-599674-37']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+
+  </body>
+</html>

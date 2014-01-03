@@ -1,0 +1,9 @@
+<article class="article-summary">
+  <p class="article-date text-muted">
+    <time>{{ .Date.Format "January 2, 2006" }}</time>
+  </p>
+  <h2 class="article-header"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+  {{ if .Description }}
+    <p>{{ .Description }}</p>
+  {{ end }}
+</article>

@@ -1,0 +1,27 @@
+{{ template "chrome/header.html" . }}
+
+  <div class="top-section">
+    <div class="container">
+      <header class="page-head">
+        <p><img src="/static/img/dana-woodman.jpg" class="avatar avatar-small"></p>
+        <h1 class="top-section-header">Posts</h1>
+      </header>
+    </div>
+  </div>
+
+  <div class="leader">
+    <div class="container">
+      <p class="lead">
+        Occasional ramblings on technology, business, art, life and anything else
+        that catches my fancy.
+      </p>
+    </div>
+  </div>
+
+  <section class="container">
+    {{ range .Data.Pages }}
+      {{ .Render "summary" }}
+    {{ end }}
+  </section>
+
+{{ template "chrome/footer.html" }}

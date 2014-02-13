@@ -19,13 +19,13 @@
     {{ end }}
 
     <div class="main-content container">
-      {{ .Content }}
-      <hr>
-      <p class="text-muted text-right">
+      <p class="text-muted">
         By <a href="http://danawoodman.com">Dana Woodman</a>
         on
         {{ .Date.Format "January 2, 2006" }}
       </p>
+      <hr>
+      {{ .Content }}
     </div>
   </article>
 

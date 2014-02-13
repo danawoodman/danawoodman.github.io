@@ -2,6 +2,7 @@
 title: "7 Things You Should Consider If You're Starting a Makerspace"
 date: "2014-01-02"
 description: "Some key takeaways from my experience starting a makerspace in my hometown."
+draft: true
 ---
 
 

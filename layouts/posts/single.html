@@ -1,32 +1,5 @@
 {{ template "chrome/header.html" . }}
 
-  <article>
-    <div class="top-section">
-      <div class="container">
-        <header class="page-head">
-          <p><img src="/static/img/dana-woodman.jpg" class="avatar avatar-small"></p>
-          <h1 class="top-section-header">{{ .Title }}</h1>
-        </header>
-      </div>
-    </div>
-
-    {{ if .Description }}
-      <div class="leader">
-        <div class="container">
-          <p class="lead">{{ .Description }}</p>
-        </div>
-      </div>
-    {{ end }}
-
-    <div class="main-content container">
-      <p class="text-muted">
-        By <a href="http://danawoodman.com">Dana Woodman</a>
-        on
-        {{ .Date.Format "January 2, 2006" }}
-      </p>
-      <hr>
-      {{ .Content }}
-    </div>
-  </article>
+  {{ .Render "full" }}
 
 {{ template "chrome/footer.html" . }}

@@ -28,3 +28,4 @@ echo -e "\033[0;32mDeploying updates to Github...\033[0m"
 git push origin master
 git push public `git subtree split --prefix public master`:master --force
 
+echo -e "\033[0;32mChanges successfully published!\033[0m"

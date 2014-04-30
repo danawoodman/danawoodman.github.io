@@ -1,3 +1,8 @@
 #!/bin/bash
 
+# Make sure this script is run alongside the hugo content 
+# even if run as an executable.
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd $DIR
+
 hugo server --watch --source=./

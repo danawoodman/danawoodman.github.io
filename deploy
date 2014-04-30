@@ -1,17 +1,18 @@
 #!/bin/bash
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+# Get the directory of where this script is run.
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $DIR
 
 echo -e "\033[0;32mBuilding project...\033[0m"
 
 # Build the project.
-hugo -s $DIR
+hugo -s ./
 
 echo -e "\033[0;32mCommitting changes...\033[0m"
 
 # Add changes to git.
-git add $DIR
+git add .
 
 # Commit changes.
 msg="rebuilding site `date`"

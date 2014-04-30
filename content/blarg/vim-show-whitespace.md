@@ -1,10 +1,10 @@
 ---
-title: "Show whitespace in vim"
+title: "Show whitespace characters in vim"
 date: "2014-04-29"
 ---
 I like to be able to see the whitespace characters in my editor, specifically I like to see when code is indented with tabs versus spaces:
 
-![](http://cl.ly/VGCh/Screen%20Shot%202014-04-29%20at%2012.08.19%20PM.png)
+![whitespace screenshot](http://cl.ly/VGCh/Screen%20Shot%202014-04-29%20at%2012.08.19%20PM.png)
 
 Add the following to your `.vimrc` to display a cute arrow unicode character for tabs in vim:
 
@@ -14,4 +14,3 @@ set listchars=tab:➪ 
 ```
 
 You can change the arrow to any valid unicode character that your chosen font supports. Play around and find something you really like.
-

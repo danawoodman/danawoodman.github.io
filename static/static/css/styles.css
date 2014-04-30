@@ -21,7 +21,6 @@ body {
   font-size: 16px;
   font-weight: 100;
   margin: 0;
-  text-align: center;
   padding: 0;
 }
 
@@ -39,8 +38,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px dashed #c6c5b4;
   color: #444;
+  font-size: 1.45em;
   margin: 1.75em 0 0.75em 0;
   padding-bottom: 0.25em;
 }
@@ -49,7 +49,7 @@ a {
   color: #09b86e;
 }
 
-em {
+mark {
   background: #fffad4;
   color: #830900;
   font-style: normal;
@@ -68,16 +68,25 @@ blockquote {
 
 
 li {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.3em;
 }
 
 
 /*==================================================
-== Page Header
+== Headers
 ==================================================*/
 
 .page-header {
-  border-bottom: 0;
+  font-size: 40px;
+  margin: 0.5em 0 1em 0;
+}
+
+.section-header {
+  color: #999;
+  font-size: 26px;
+  margin: 2em 0 1.5em 0;
+  padding-bottom: 0.75em;
+  text-align: center;
 }
 
 
@@ -86,162 +95,146 @@ li {
 ==================================================*/
 
 .container {
-  margin: 0 auto;
   max-width: 680px;
   padding: 3em 1.5em;
-  text-align: left;
 }
 
 
 /*==================================================
-== Navbar
+== Logo
 ==================================================*/
 
-.navigation {
-  background: #287a50 url('/static/img/dark-green-trees.png') fixed;
-  border: 0 none;
-  border-bottom: 1px solid #24593f;
-  border-radius: 0;
-  font-family: "museo-slab", serif;
-  font-size: 18px;
-  margin-bottom: 0;
+.logo {
+  font-size: 30px;
+  margin-top: 0;
 }
-  .navigation a,
-  .navigation a:hover {
-    color: white;
-    text-decoration: none;
-  }
-  .navigation-brand {
-    color: white;
-    float: left;
-    padding: 0.75em 0;
-  }
-  .navigation .container {
-    padding-bottom: 0;
-    padding-top: 0;
-  }
-  .navigation-links,
-  .navigation-links li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  .navigation-links li,
-  .navigation-links a {
-    display: inline-block;
-  }
-  .navigation-links a {
-    color: #acf4d8;
-    padding: 0.75em 1.25em;
-  }
-    .navigation-links a:hover {
-      background-color: #1c5638;
-      color: white;
-    }
 
 
 /*==================================================
-== Top section
+== Avatar
 ==================================================*/
 
-.top-section {
-  background: #57c88e url('/static/img/green-trees.png') fixed;
+.avatar {
+  background: white;
+  border: 1px dashed #c6c5b4;
+  border-radius: 100em;
+  max-width: 100%;
+  padding: 8px;
+  width: auto;
 }
-
-  .page-head {
-    text-align: center;
+.avatar.avatar-small {
+  height: 100px;
+  width: 100px;
+}
+  .avatar:hover {
+    -webkit-animation: spin 2s cubic-bezier(0.680, -0.550, 0.265, 1.550) infinite;
+       -moz-animation: spin 2s cubic-bezier(0.680, -0.550, 0.265, 1.550) infinite;
+        -ms-animation: spin 2s cubic-bezier(0.680, -0.550, 0.265, 1.550) infinite;
+         -o-animation: spin 2s cubic-bezier(0.680, -0.550, 0.265, 1.550) infinite;
   }
-    .avatar {
-      background: white;
-      border-radius: 100em;
-      box-shadow: 0 0 0 8px #45a273;
-      max-width: 100%;
-      padding: 5px;
-      width: auto;
-    }
-    .avatar.avatar-small {
-      height: 100px;
-      width: 100px;
-    }
-      .avatar:hover {
-        -webkit-animation: spin 2s cubic-bezier(0.680, -0.550, 0.265, 1.550) infinite;
-           -moz-animation: spin 2s cubic-bezier(0.680, -0.550, 0.265, 1.550) infinite;
-            -ms-animation: spin 2s cubic-bezier(0.680, -0.550, 0.265, 1.550) infinite;
-             -o-animation: spin 2s cubic-bezier(0.680, -0.550, 0.265, 1.550) infinite;
-      }
-
-    .top-section-header {
-      color: #000;
-      font-size: 45px;
-      font-weight: 300;
-      line-height: 1.2;
-      margin: 1em 0 0.5em 0;
-      text-transform: uppercase;
-      text-shadow: 2px 2px 0 #ddf5ea, 4px 4px 0 #45a273;
-    }
-      .top-section-header small {
-        color: #2a6749;
-        display: block;
-        font-size: 20px;
-        text-shadow: 1px 1px 0 #57c88e, 2px 2px 0 #45a273;
-      }
 
 
 /*==================================================
-== Leader
+== Header
 ==================================================*/
 
-.leader {
+.header {
   background: #fffad4;
+  border-bottom: 1px dashed #c6c5b4;
 }
-  .leader .lead {
+  .header .container {
+    padding-bottom: 2em;
+    padding-top: 2em;
+  }
+  .header .lead {
     color: #830900;
     font-family: "museo-slab", serif;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.7;
     margin: 0;
     padding: 0;
   }
-    .leader .lead a {
+    .header .lead a {
       color: #d71d00;
     }
 
 
 /*==================================================
-== Links block
+== Link Bar 
 ==================================================*/
 
-.page-footer {
-  background: #287a50 url('/static/img/dark-green-trees.png') fixed;
-  color: #57c88e;
-}
-  .page-footer a {
-    color: #acf4d8;
-    display: block;
-    margin: 0 0 0.25em;
-  }
-  .page-footer h2 {
-    border-bottom-color: #45a273;
-    color: #e7fff5;
-    font-size: 1.3em;
-    margin-top: 1.25em;
+.link-bar {}
+  .link-bar a {
+    font-size: 30px;
+    padding: 0.25em;
   }
 
 
 /*==================================================
-== Article Summary
+== Article Teaser
 ==================================================*/
 
-.article-summary {
-  border-bottom: 1px dashed #ececec;
-  margin: 0 0 1.5em 0;
-  padding: 0 0 1.5em 0;
+.article-teaser {
+  border-bottom: 1px dashed #c6c5b4;
+  margin: 0 0 1em 0;
+  padding: 0 0 1em 0;
 }
-  .article-summary .article-header {
-    margin: 0 0 0.5em 0
+  .article-teaser-header {
+    font-size: 20px;
+    margin: 0; 
   }
-  .article-summary .article-date {
-    font-size: 0.9em;
-    margin: 0 0 1em 0;
+  .article-teaser-date {
+    font-size: 13px;
+    margin: 4px 0 0 0;
   }
 
+
+/*==================================================
+== Article Detail
+==================================================*/
+
+.article {
+  margin-bottom: 5em;
+}
+  .article-header {
+    border-bottom: 1px dashed #c6c5b4;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 0.25em;
+    padding-bottom: 0.5em;
+  }
+  .article-date {
+    color: #999;
+    font-size: 0.9em;
+  }
+  .article-content {}
+    .article-content img {
+      max-width: 100%;
+    }
+
+
+/*==================================================
+== Code Highlighting
+==================================================*/
+pre {
+  background: transparent;
+  border: 0 none;
+  padding: 0;
+}
+.hljs {
+  border-radius: 3px;
+  padding: 1.25em 1.75em;
+}
+
+
+/*==================================================
+== Breadcrumbs
+==================================================*/
+.breadcrumb {
+  background: transparent;
+  padding: 0;
+}
+  .breadcrumb a {
+    color: #999;
+    font-size: 0.8em;
+  }

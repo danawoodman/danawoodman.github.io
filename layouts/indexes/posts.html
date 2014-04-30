@@ -1,9 +1,0 @@
-{{ template "chrome/header.html" . }}
-
-  <h1 class="page-header">Posts</h1>
-
-  {{ range .Data.Pages }}
-    {{ .Render "full" }}
-  {{ end }}
-
-{{ template "chrome/footer.html" . }}

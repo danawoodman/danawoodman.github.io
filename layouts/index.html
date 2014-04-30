@@ -1,13 +1,21 @@
 {{ template "chrome/header.html" . }}
 
-  {{ range $key, $val := .Data.Pages }}
-    {{ if $key }}
-      {{ .Render "summary" }}
-    {{ else }}
-      <h3 class="section-header">Most Recent Post</h3>
-      {{ .Render "full" }}
-      <h3 class="section-header">More Posts</h3>
-    {{ end }}
+  <!-- 
+  <h3 class="section-header">A Few Projects</h3>
+  {{ range $key, $value := .Data.Pages }}
+      {{ if eq $value.Type  "project" }}
+        {{ .Render "li" }}
+      {{ end }}
   {{ end }}
+  <p class="pull-right"><a href="/project/" class="text-muted">View my projects &#8594;</a></p>
+  -->
+
+  <h3 class="section-header">Some Recent <em>Blargs</em></h3>
+  {{ range $key, $value := .Data.Pages }}
+      {{ if eq $value.Type  "blarg" }}
+        {{ .Render "li" }}
+      {{ end }}
+  {{ end }}
+  <p class="pull-right"><a href="/blarg/" class="text-muted">Checkout the Blarg &#8594;</a></p>
 
 {{ template "chrome/footer.html" . }}

@@ -1,9 +1,15 @@
 {{ template "chrome/header.html" . }}
 
 <article class="article">
+  <ol class="breadcrumb">
+    <li><a href="/blarg/">&#8592; Back to the <em>Blarg!</em></a></li> 
+  </ol>
   <h1 class="article-header">
     <a href="{{ .Permalink }}">{{ .Title }}</a>
   </h1>
+  <p class="article-date">
+    &#10026; {{ .Date.Format "January 2, 2006" }}
+  </p>
   <div role="content" class="article-content">
     {{ .Content }}
   </div>

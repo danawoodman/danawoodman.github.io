@@ -6,8 +6,8 @@
     <meta name="description" content="Dana Woodman's home on the Internet">
     <base href="http://danawoodman.com">
     <title>Dana Woodman</title>
-    <link rel="canonical" href="http://danawoodman.com/">
-    <link href="http://danawoodman.com/index.xml" rel="alternate" type="application/rss+xml" title="Dana Woodman" />
+    <link rel="canonical" href="http://danawoodman.com/blarg/iteractive-git-add">
+    <link href="" rel="alternate" type="application/rss+xml" title="Dana Woodman" />
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 <link href="https://yandex.st/highlightjs/8.0/styles/default.min.css" rel="stylesheet">
@@ -44,97 +44,43 @@
 
 
 
-  
+<article class="article">
+  <ol class="breadcrumb">
+    <li><a href="/blarg/">&#8592; Back to the <em>Blarg!</em></a></li> 
+  </ol>
+  <h1 class="article-header">
+    <a href="http://danawoodman.com/blarg/iteractive-git-add">Interactively add content in git</a>
+  </h1>
+  <p class="article-date">
+    &#10026; March 2, 2014
+  </p>
+  <div role="content" class="article-content">
+    <p>It&rsquo;s often handy to add changes you&rsquo;ve made to your local branch in git in a more interactive fashion. Sometimes the changes you have make more sense in multiple commits than one catch all commit.</p>
 
-  <h3 class="section-header">Some Recent <em>Blargs</em></h3>
-  
-      
-        <article class="article-teaser">
-  <h3 class="article-teaser-header">
-    <a href="http://danawoodman.com/blarg/vim-show-whitespace">
-      <small class="article-teaser-date pull-right">
-        &#10026; April 29, 2014
-      </small>
-      Show whitespace in vim
-    </a>
-  </h3>
+<p>It&rsquo;s quite easy to do this in git and here&rsquo;s how:</p>
+
+<pre><code class="bash">git add -p
+</code></pre>
+
+<p>The <code>-p</code> flag say to add changes interactively, breaking cohesive changes up into chunks. Here&rsquo;s roughly what it will look like:</p>
+
+<p><img src="http://cl.ly/VHFO/Screen%20Shot%202014-04-30%20at%209.00.31%20AM.png" alt="interactive git add" />
+</p>
+
+<p>Now that you see your changes, you have a few options:</p>
+
+<ul>
+<li><code>a</code> &ndash; Add the given chunk.</li>
+<li><code>n</code> &ndash; Skip the given chunk (eg &ldquo;next&rdquo;).</li>
+<li><code>s</code> &ndash; Split the given chunk up into smaller chunks.</li>
+<li><code>q</code> &ndash; Stop adding chunks and exit out of <code>add</code>.</li>
+<li><code>?</code> &ndash; See all the other available sub commands.</li>
+</ul>
+
+<p>Hope that&rsquo;s helpful.</p>
+
+  </div>
 </article>
-
-      
-  
-      
-        <article class="article-teaser">
-  <h3 class="article-teaser-header">
-    <a href="http://danawoodman.com/blarg/run-go-fmt-vim">
-      <small class="article-teaser-date pull-right">
-        &#10026; April 25, 2014
-      </small>
-      Run &#39;go fmt&#39; in vim on save
-    </a>
-  </h3>
-</article>
-
-      
-  
-      
-        <article class="article-teaser">
-  <h3 class="article-teaser-header">
-    <a href="http://danawoodman.com/blarg/spellcheck-markdown-vim">
-      <small class="article-teaser-date pull-right">
-        &#10026; April 18, 2014
-      </small>
-      Enable spellcheck for markdown files in vim
-    </a>
-  </h3>
-</article>
-
-      
-  
-      
-        <article class="article-teaser">
-  <h3 class="article-teaser-header">
-    <a href="http://danawoodman.com/blarg/splat-args-javascript">
-      <small class="article-teaser-date pull-right">
-        &#10026; March 24, 2014
-      </small>
-      Implementing splat args in JavaScript
-    </a>
-  </h3>
-</article>
-
-      
-  
-      
-        <article class="article-teaser">
-  <h3 class="article-teaser-header">
-    <a href="http://danawoodman.com/blarg/git-patch">
-      <small class="article-teaser-date pull-right">
-        &#10026; March 10, 2014
-      </small>
-      Create a patch from a git commit
-    </a>
-  </h3>
-</article>
-
-      
-  
-      
-        <article class="article-teaser">
-  <h3 class="article-teaser-header">
-    <a href="http://danawoodman.com/blarg/iteractive-git-add">
-      <small class="article-teaser-date pull-right">
-        &#10026; March 2, 2014
-      </small>
-      Interactively add content in git
-    </a>
-  </h3>
-</article>
-
-      
-  
-      
-  
-  <p class="pull-right"><a href="/blarg/" class="text-muted">Checkout the Blarg &#8594;</a></p>
 
 
     </section>

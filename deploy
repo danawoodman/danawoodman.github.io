@@ -1,14 +1,17 @@
 #!/bin/bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+cd $DIR
 
 echo -e "\033[0;32mBuilding project...\033[0m"
 
 # Build the project.
-hugo -s ./
+hugo -s $DIR
 
 echo -e "\033[0;32mCommitting changes...\033[0m"
 
 # Add changes to git.
-git add .
+git add $DIR
 
 # Commit changes.
 msg="rebuilding site `date`"

@@ -21,4 +21,5 @@ echo -e "\033[0;32mDeploying updates to Github...\033[0m"
 
 # Push source and build repos.
 git push origin master
-git subtree push --prefix=public public master
+#git subtree push --prefix=public public master
+git push public `git subtree split --prefix public master`:master --force

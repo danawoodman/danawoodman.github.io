@@ -1,3 +1,5 @@
 # danawoodman.com
 
-The landing page the life of Dana Woodman.
+> The landing page for the life of Dana Woodman.
+
+Hosted at <http://danawoodman.com>.

@@ -1,367 +1,110 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html class="h-100">
   <head>
     <title>Dana Woodman</title>
-    <meta name='description' countent='Maker, artist, software developer and community builder.'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta
+      name="description"
+      countent="Maker, artist, software developer and community builder."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://unpkg.com/euphoria/dist/euphoria.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Bungee+Shade|Indie+Flower|Raleway"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,900"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
     <style>
-       @keyframes colorRotate {
-         from {
-           color: rgb(255, 0, 0);
-         }
-         16.6% {
-           color: rgb(255, 0, 255);
-         }
-         33.3% {
-           color: rgb(0, 0, 255);
-         }
-         50% {
-           color: rgb(0, 255, 255);
-         }
-         66.6% {
-           color: rgb(0, 255, 0);
-         }
-         83.3% {
-           color: rgb(255, 255, 0);
-         }
-         to {
-           color: rgb(255, 0, 0);
-         }
-       }
-
-      * {
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
+      :root {
+        --font-family-sans-serif: Roboto, sans-serif;
+        --color-primary: #00cca3;
+        --color-secondary: #db3088;
       }
-
-      body {
-        background: #fffbe3;
-        font-size: 16px;
-        font-family: 'Raleway', Helvetica, sans-serif;
-      }
-
-      a {
-        color: #009eff;
-        text-decoration: none;
-        transition:
-          background 0.3s,
-          color 0.3s;
-      }
-        a:hover {
-          color: #ff3393;
-        }
-
-      h1, h2, h3, h4, h5, h6 {
-        line-height: 1.1;
-        margin: 0;
-        padding: 0;
-      }
-
-      .container {
-        margin: 4rem auto;
-        max-width: 55rem;
-      }
-
-      .masthead {
-        margin-bottom: 7rem;
-      }
-        .avatar {
-          margin-bottom: 2rem;
-          text-align: center;
-        }
-          .avatar img {
-            border-radius: 50%;
-          }
-        .page-heading {
-          color: #a32163;
-          font-family: 'Bungee Shade', cursive;
-          font-size: 3.5rem;
-          margin-bottom: 2rem;
-          text-align: center;
-          animation: colorRotate 10s linear 0s infinite;
-        }
-        .byline {
-          color: #727066;
-          font-family: 'Indie Flower', cursive;
-          font-size: 2rem;
-          margin-bottom: 4rem;
-          text-align: center;
-        }
-        .contact-button {
-          text-align: center;
-        }
-          .contact-button a {
-            background: transparent;
-            border-radius: 0.1rem;
-            border: 2px solid #ff3393;
-            color: #ff3393;
-            font-size: 1.2rem;
-            font-weight: bold;
-            padding: 1.25rem 3rem;
-            text-transform: uppercase;
-          }
-            .contact-button a:hover {
-              background: #ff3393;
-              color: white;
-            }
-
-      .project-links {}
-        .project-links-heading {
-          color: #a3a092;
-          font-family: 'Indie Flower', cursive;
-          margin-bottom: 3rem;
-          text-align: center;
-        }
-        .project-list {
-          display: flex;
-          flex-wrap: wrap;
-          margin-left: -15px;
-        }
-          .project-list-item {
-            display: flex;
-            padding: 0 3rem 3rem 0;
-            width: 50%;
-          }
-          @media all and (max-width: 40em) {
-            .project-list-item {
-              width: 100%;
-            }
-          }
-          /*
-          @media all and (min-width: 60em) {
-            .list-item {
-              width: 33.33%;
-            }
-          }
-          */
-        .project {
-          display: flex;
-          flex-direction: column;
-          background: white;
-          border: 1px solid #d1cdba;
-          box-shadow:
-            1px 1px 0px #d1cdba,
-            2px 2px 0px #d1cdba,
-            3px 3px 0px #d1cdba,
-            4px 4px 0px #d1cdba,
-            5px 5px 0px #d1cdba,
-            6px 6px 0px #d1cdba,
-            7px 7px 0px #d1cdba,
-            8px 8px 0px #d1cdba,
-            9px 9px 0px #d1cdba,
-            10px 10px 0px #d1cdba,
-            11px 11px 0px #d1cdba,
-            12px 12px 0px #d1cdba,
-            13px 13px 0px #d1cdba,
-            14px 14px 0px #d1cdba,
-            15px 15px 0px #d1cdba;
-          transition:
-            border-color 0.3s,
-            box-shadow 0.3s;
-          width: 100%;
-        }
-          /*
-          .project:nth-child(odd) {
-            transform: rotate(-1deg);
-          }
-          .project:nth-child(even) {
-            transform: rotate(1deg);
-          }
-          */
-          .project:hover {
-            border-color: #ff3393;
-            box-shadow:
-              1px 1px 0px #ff3393,
-              2px 2px 0px #ff3393,
-              3px 3px 0px #ff3393,
-              4px 4px 0px #ff3393,
-              5px 5px 0px #ff3393,
-              6px 6px 0px #ff3393,
-              7px 7px 0px #ff3393,
-              8px 8px 0px #ff3393,
-              9px 9px 0px #ff3393,
-              10px 10px 0px #ff3393,
-              11px 11px 0px #ff3393,
-              12px 12px 0px #ff3393,
-              13px 13px 0px #ff3393,
-              14px 14px 0px #ff3393,
-              15px 15px 0px #ff3393;
-          }
-          .project-image {
-            width: 100%;
-          }
-          .project-heading {
-            color: #5b5a51;
-            font-size: 1.7rem;
-            margin: 0;
-            padding: 2rem 0;
-            text-align: center;
-            text-transform: uppercase;
-          }
-          .project-role {
-            color: #a3a092;
-            font-style: italic;
-            padding: 0 2rem;
-            margin: 0;
-            text-align: center;
-          }
-          .project-description {
-            color: #5b5a51;
-            padding: 2rem 2rem;
-            margin: 0;
-          }
-
-          .social-links {
-            margin-top: 3rem;
-            text-align: center;
-          }
-            .social-links a {
-              color: #727066;
-              font-size: 2rem;
-              padding: 1rem;
-            }
-              .social-links a:hover {
-                color: #ff3393;
-              }
-
-      .news {
-        margin: 4rem 0;
-      }
-        .news-heading {
-          font-family: 'Bungee Shade', cursive;
-          font-size: 2.5rem;
-          margin-bottom: 2rem;
-          text-align: center;
-          text-transform: uppercase;
-        }
-        .news-list {
-        }
-          .news-list li {
-            color: #93907a;
-            list-style: none;
-            margin: 1rem 0;
-            text-align: center;
-          }
-          .news-list a {
-            color: #e87400;
-          }
-          .news-list a:hover {
-            color: #ff3393;
-          }
     </style>
-    <link rel='stylesheet' href='./css/animate.css'></link>
-    <link rel='stylesheet' href='./css/font-awesome.css'></link>
-    <link href='https://fonts.googleapis.com/css?family=Bungee+Shade|Indie+Flower|Raleway' rel='stylesheet'>
-  </head>
-  <body>
-    <div class='container'>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-138278004-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      <header class='masthead animated bounceInDown'>
-        <figure class='avatar'>
-          <img src='https://www.gravatar.com/avatar/39807ce0d3f73fbd1fedb779d7b80851?s=240'>
+      gtag("config", "UA-138278004-1");
+    </script>
+  </head>
+  <body class="h-100 m-none p-lg ff-sans-serif fw-lighter txt-md">
+    <div class="my-xl mx-auto center h-100" style="max-width: 480px">
+      <header class="mb-lg">
+        <figure class="mb-lg">
+          <img
+            src="https://www.gravatar.com/avatar/39807ce0d3f73fbd1fedb779d7b80851?s=160"
+            class="rad-100"
+          />
         </figure>
-        <h1 class='page-heading'>Dana Woodman</h1>
-        <h4 class='byline'>
-          Maker, artist, software developer and community builder.
-        </h4>
-        <p class='contact-button'>
-          <a href='mailto:dana@danawoodman.com'>Contact Me</a>
+        <h1 class="txt-xxl fw-lighter gray-darkest">
+          Hi, I'm Dana
+        </h1>
+        <p class="lh-lg my-md fw-lighter">
+          I am the VP of Web and Mobile at
+          <a
+            href="https://remote.it"
+            class="td-none gray-darker hov-white px-xs py-xxs ba bc-gray-light hov-bg-gray-darkest hov-bc-gray-darkest"
+            target="_blank"
+            >remote.it</a
+          >. We are the first Virtual Private Internet (VPI) company, focusing
+          on securing the world's internet connected devices.
+        </p>
+        <p class="lh-lg my-md fw-lighter">
+          In 2012, I founded the first makerspace in Sonoma County, California,
+          <a
+            href="https://chimeraarts.org"
+            target="_blank"
+            class="td-none gray-darker hov-white px-xs py-xxs ba bc-gray-light hov-bg-gray-darkest hov-bc-gray-darkest"
+            >Chimera Arts & Makerspace</a
+          >, which is a space for artists, makers, inventors and businesses to
+          build the things of their dreams.
         </p>
       </header>
 
-      <section class='project-links animated zoomIn'>
-        <h2 class='project-links-heading'>I wear many hats, here are some...</h2>
-
-        <ul class='project-list'>
-          <li class='project-list-item'>
-            <article class='project'>
-              <a href='http://builtbybig.com' target='_blank'>
-                <img class='project-image' src='./images/big.png' alt='BIG'>
-                <h3 class='project-heading'>Built By BIG, LLC</h3>
-                <p class='project-role'>Owner</p>
-                <p class='project-description'>
-                  My company focusing on installation art, product prototyping and software development.
-                </p>
-              </a>
-            </article>
-          </li>
-          <li class='project-list-item'>
-            <article class='project'>
-              <a href='http://chimeraarts.org' target='_blank'>
-                <img class='project-image' src='./images/chimera.png' alt='Chimera'>
-                <h3 class='project-heading'>Chimera Arts & Makerspace</h3>
-                <p class='project-role'>Founder, Executive Director</p>
-                <p class='project-description'>
-                  I founded Sonoma County's first community arts and makerspace. 3,000 sq.ft. maker facility with laser cutting, 3D printing, jewelry, welding, woodworking and a lot more.
-                </p>
-              </a>
-            </article>
-          </li>
-          <li class='project-list-item'>
-            <article class='project'>
-              <a href='https://contact.ly' target='_blank'>
-                <img class='project-image' src='./images/contactly.png' alt='Contactly'>
-                <h3 class='project-heading'>Contact.ly</h3>
-                <p class='project-role'>Co-Founder</p>
-                <p class='project-description'>
-                  Software startup which eases generating sales leads on social media.
-                </p>
-              </a>
-            </article>
-          </li>
-          <li class='project-list-item'>
-            <article class='project'>
-              <a href='http://dana.land' target='_blank'>
-                <img class='project-image' src='./images/blog.png' alt='Dana.land'>
-                <h3 class='project-heading'>Dana.land</h3>
-                <p class='project-role'>Owner</p>
-                <p class='project-description'>
-                  I write very infrequent blog posts, mostly related to software
-                </p>
-              </a>
-            </article>
-          </li>
-        </ul>
-
-      </section>
-
-      <section class='news'>
-        <h3 class='news-heading'>In The News</h3>
-        <ul class='news-list'>
-          <li>
-            <a href='http://makezine.com/2016/09/02/maker-pro-news-entrepreneurs-at-world-maker-faire-the-future-of-the-iot-and-more/' target='_blank'>My trip to the White House</a> in MAKE: Magazine
-          </li>
-          <li>
-            The Press Democrat's <a href='http://www.pressdemocrat.com/news/5528294-181/sebastopols-chimera-maker-group-settles?artslide=0' target='_blank'>article on Chimera's new space</a>
-          </li>
-          <li>
-            North Bay Bohemian <a href='http://www.bohemian.com/northbay/making-it/Content?oid=3007326 ' target='_blank'>coverage of Chimera and the White House visit</a>
-          </li>
-          <li>
-            Sonoma West Times <a href='http://www.sonomawest.com/sonoma_west_times_and_news/news/chimera-arts-advocates-national-makerspace-movement/article_c3e92eda-7a9b-11e6-82b1-43daf00939d3.html' target='_blank'>coverage of opening of new Chimera facility</a>
-          </li>
-          <li>
-            Sonoma West Times <a href='http://www.sonomawest.com/sonoma_west_times_and_news/news/makerspace-opens-doors-to-new-facility/article_65e93426-fc40-11e5-89fa-df80f2f48aa0.html' target='_blank'>coverage of my trip to the White House</a>
-          </li>
-          <li>
-            <a href='http://northbaystartup.com/podcast/9' target='_blank'>North Bay Startup Podcast interview</a> and a 
-            <a href='http://northbaystartup.com/podcast/15'>follow up interview</a>
-          </li>
-          <li>
-            Sonoma County Gazette <a href='http://www.sonomacountygazette.com/cms/pages/sonoma-county-news-article-1453.html' target='_blank'>article on Chimera</a>
-          </li>
-        </ul>
-      </section>
-
-      <footer class='social-links animated bounceInUp'>
-        <a href='https://github.com/danawoodman'>
-          <i class='fa fa-github-alt' aria-hidden='true'></i>
+      <footer class="mt-lg">
+        <div class="mb-lg">
+          <a
+            href="mailto:dana@danawoodman.com"
+            class="dib px-md py-sm ba upper ls-lg td-none gray-light bc-gray-light hov-white hov-bg-gray-darkest hov-bc-gray-darkest"
+            >Contact Me</a
+          >
+        </div>
+        <a
+          href="https://github.com/danawoodman"
+          class="gray-light hov-gray-darkest td-none txt-xl mx-md"
+          target="_blank"
+        >
+          <i class="fab fa-github" aria-hidden="true"></i>
         </a>
-        <a href='https://www.linkedin.com/in/danawoodman'>
-          <i class='fa fa-linkedin' aria-hidden='true'></i>
+        <a
+          href="https://www.linkedin.com/in/danawoodman"
+          class="gray-light hov-gray-darkest td-none txt-xl mx-md"
+          target="_blank"
+        >
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </footer>
-
     </div>
   </body>
 </html>

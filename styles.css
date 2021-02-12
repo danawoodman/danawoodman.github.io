@@ -1,50 +1,36 @@
 :root {
   /* Defaults */
-  --default-font-family: "Work Sans", sans-serif;
-  --default-font-size: 18px;
+  --default-font-family: "Nunito", sans-serif;
+  --default-font-weight: 300;
+  --default-font-size: 19px;
   --default-color: #333;
-  --default-background: white;
+  --default-background: #e8eced;
+
+  --bold-font-weight: 900;
 
   /* Links */
   --link-color: #0075b0;
   --link-color-hover: #1fb4ff;
 
-  /* Code related */
-  --code-font-family: "PT Mono", monospace;
-  --code-font-size: 0.95rem;
-  --code-color: black;
-  --code-background: #f7f6e9;
-  --code-padding: 0.2rem 0.3rem;
-
   /* Container */
-  --container-width: 30rem;
+  --container-width: 28rem;
+  --container-background: white;
 
   /* Header/brand */
   --brand-link-color: #444;
   --brand-link-color-hover: #222;
 
   /* Headings */
-  --heading-font-family: "Fira Sans", sans-serif;
+  --heading-font-family: "Nunito", sans-serif;
+  --heading-font-weight: 900;
   --heading-link-color: black;
-  --h1-font-size: 2.7rem;
+  --h1-font-size: 2.5rem;
   --h1-margin: 0 0 2rem 0;
   --h2-font-size: 2.1rem;
-
-  --paragraph-margin: 2rem 0;
-  --paragraph-line-height: 1.8;
-
-  --footer-link-color: #777;
-  --footer-link-color-hover: var(--link-color);
-}
-
-@media only screen and (max-width: 600px) {
-  :root {
-    /* --default-font-size: 15px; */
-  }
 }
 
 /* Dark mode support */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --default-color: #ccc;
     --default-background: #1d1f21;
@@ -54,6 +40,10 @@
 
     --heading-link-color: #ccc;
   }
+} */
+
+* {
+  box-sizing: border-box;
 }
 
 html {
@@ -64,17 +54,21 @@ body {
   color: var(--default-color);
   background-color: var(--default-background);
   font-family: var(--default-font-family);
-  font-weight: 300;
+  font-weight: var(--default-font-weight);
   margin: 0;
   padding: 0 0 6rem 0;
 }
 h1,
 h2,
 h3 {
+  color: var(--heading-color);
   font-family: var(--heading-font-family);
-  font-weight: 900;
+  font-weight: var(--heading-font-weight);
   line-height: 1.2;
   letter-spacing: 0.1rem;
+}
+h1 {
+  font-size: var(--h1-font-size);
 }
 h1 a,
 h2 a,
@@ -83,69 +77,87 @@ h3 a {
 }
 
 p {
-  margin: var(--paragraph-margin);
-  line-height: var(--paragraph-line-height);
+  margin: 2rem 0;
+  line-height: 1.5;
 }
 b,
 strong {
-  font-weight: 500;
+  font-weight: var(--bold-font-weight);
 }
 
 main {
-  margin: 3rem auto;
+  background: var(--container-background);
+  box-shadow: 0 0.3rem 1.5rem rgba(0, 0, 0, 0.05);
+  margin: 8rem auto;
   max-width: var(--container-width);
 }
 
 header {
-  margin-bottom: 3rem;
-  text-align: center;
+  padding: 3rem 3rem 0 3rem;
 }
 header h1 {
-  font-family: var(--heading-font-family);
-  font-size: var(--h1-font-size);
-  font-weight: 800;
-  color: var(--heading-color);
   margin: 0;
 }
-header figure {
-  margin-bottom: 2rem;
-}
-header figure img {
-  border-radius: 50%;
+header h3 {
+  margin: 1rem 0 0 0;
+  color: #999;
+  font-weight: 300;
 }
 
-content {
-  text-align: justify;
+aside figure {
+  padding: 0;
+  margin: 0;
 }
-content a {
-  color: var(--link-color);
+aside figure img {
+  width: 100%;
+}
+
+/* Main content */
+article {
+  color: #777;
+  padding: 3rem;
+}
+article > :first-child {
+  margin-top: 0;
+}
+article > :last-child {
+  margin-bottom: 0;
+}
+article a {
+  color: #444;
   font-weight: 500;
   text-decoration: none;
 }
-content a:hover {
+article a:hover {
   color: var(--link-color-hover);
   text-decoration: underline;
 }
 
+/* Link */
 footer {
-  margin: 3rem 0;
-}
-footer p {
-  margin: 0.25rem 0;
+  display: flex;
+  align-items: center;
+  padding: 0 3rem 4rem 3rem;
 }
 footer a {
-  display: flex;
-  color: var(--footer-link-color);
   align-items: center;
+  color: #999;
+  margin-right: 0.5rem;
+  font-size: 1.6rem;
   text-decoration: none;
-  font-size: var(--font-size-lg);
 }
 footer a:hover {
-  color: var(--footer-link-color-hover);
+  color: var(--link-color-hover);
 }
 footer a i {
   margin-right: 1rem;
 }
 footer a span {
   font-size: var(--font-size-md);
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    margin-top: 0;
+  }
 }
